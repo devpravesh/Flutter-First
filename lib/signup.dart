@@ -145,7 +145,6 @@ class _SignupState extends State<Signup> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: RaisedButton(
-                            // color: Theme.of(context).accentColor,
                             onPressed: () {
                               Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(
