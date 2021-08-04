@@ -5,7 +5,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:onlylogin/admin.dart';
 // import 'package:onlylogin/home.dart';
-import 'package:onlylogin/show.dart';
+import 'package:onlylogin/Profile.dart';
 import 'package:onlylogin/signIn.dart';
 
 // ignore: must_be_immutable

@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:onlylogin/admin.dart';
 // import 'package:onlylogin/home.dart';
 // import 'package:onlylogin/profile.dart';
-import 'package:onlylogin/show.dart';
+import 'package:onlylogin/Profile.dart';
 import 'dart:async';
 
 import 'package:onlylogin/signup.dart';
