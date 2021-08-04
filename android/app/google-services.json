@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1029475364689",
+    "project_id": "phone-auth-edd33",
+    "storage_bucket": "phone-auth-edd33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029475364689:android:040d519ff5bf1b6cb9ed70",
+        "android_client_info": {
+          "package_name": "com.example.onlylogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029475364689-r3tnhbsfbgv0ocrhiovfvo4jmqt9dtcc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpZJ2P2i5ekKHlkdAGllYHYL7j_Nh0FrQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029475364689-r3tnhbsfbgv0ocrhiovfvo4jmqt9dtcc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
