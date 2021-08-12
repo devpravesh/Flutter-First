@@ -24,78 +24,86 @@ class _LoginpageState extends State<Loginpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign in'),
+        title: Center(child: Text('Sign In')),
       ),
-      body: Form(
-          key: _formKey,
-          child: Column(children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                keyboardType: TextInputType.emailAddress,
-                validator: (input) {
-                  if (input!.isEmpty) {
-                    return 'Please Enter Your Email';
-                  }
-                },
-                onSaved: (input) => _email = input!,
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  enabledBorder: new OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                validator: (input) {
-                  if (input!.length < 6) {
-                    return 'Please Enter Valid Password';
-                  }
-                },
-                onSaved: (input) => _password = input!,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  enabledBorder: new OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                ),
-                obscureText: true,
-              ),
-            ),
-            // ignore: deprecated_member_use
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  // ignore: deprecated_member_use
-                  RaisedButton(
-                    onPressed: signIn,
-                    child: Text('Login'),
-                    textColor: Colors.white,
-                    color: Colors.blueAccent,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        side: BorderSide(color: Colors.black, width: 2)),
+      body: SingleChildScrollView(
+        child: Form(
+            key: _formKey,
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.network(
+                    "https://i.pinimg.com/originals/14/4b/dd/144bdd2ab3aca50af01ea92119fdda33.png",
+                    height: 260,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                      validator: (input) {
+                        if (input!.isEmpty) {
+                          return 'Please Enter Your Email';
+                        }
+                      },
+                      onSaved: (input) => _email = input!,
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        enabledBorder: new OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      validator: (input) {
+                        if (input!.length < 6) {
+                          return 'Please Enter Valid Password';
+                        }
+                      },
+                      onSaved: (input) => _password = input!,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        enabledBorder: new OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                      ),
+                      obscureText: true,
+                    ),
                   ),
                   // ignore: deprecated_member_use
-                  RaisedButton(
-                    onPressed: () {
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (_) => Signup()));
-                    },
-                    textColor: Colors.white,
-                    color: Colors.blueAccent,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        side: BorderSide(color: Colors.black, width: 2)),
-                    child: Text('Click To SignUp'),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        // ignore: deprecated_member_use
+                        RaisedButton(
+                          onPressed: signIn,
+                          child: Text('Login'),
+                          textColor: Colors.white,
+                          color: Colors.blueAccent,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              side: BorderSide(color: Colors.black, width: 2)),
+                        ),
+                        // ignore: deprecated_member_use
+                        RaisedButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                                MaterialPageRoute(builder: (_) => Signup()));
+                          },
+                          textColor: Colors.white,
+                          color: Colors.blueAccent,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              side: BorderSide(color: Colors.black, width: 2)),
+                          child: Text('Click To SignUp'),
+                        ),
+                      ],
+                    ),
                   ),
-                ],
-              ),
-            ),
-          ])),
+                ])),
+      ),
     );
   }
 

@@ -29,6 +29,10 @@ class _SignupState extends State<Signup> {
               key: _formKey,
               child: Column(
                 children: [
+                  Image.asset(
+                    'assets/images/Web_Photo_Editor.jpg',
+                    height: 100,
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -44,11 +48,11 @@ class _SignupState extends State<Signup> {
                         enabledBorder: new OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12)),
                       ),
-                      // onChanged: (value) {
-                      //   setState(() {
-                      //     _name = value.trim();
-                      //   });
-                      // },
+                      onChanged: (value) {
+                        setState(() {
+                          _name = value.trim();
+                        });
+                      },
                     ),
                   ),
                   Padding(
