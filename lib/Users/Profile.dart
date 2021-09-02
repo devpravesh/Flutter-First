@@ -4,10 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-// import 'package:onlylogin/imagepicker.dart';
-// import 'package:image_picker/image_picker.dart';
-import 'package:onlylogin/profileedit.dart';
-import 'package:onlylogin/signIn.dart';
+import 'package:onlylogin/Users/profileedit.dart';
+
+import 'package:onlylogin/Login.dart';
 // import 'package:onlylogin/imagepicker.dart';
 
 class Show extends StatefulWidget {

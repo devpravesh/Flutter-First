@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:onlylogin/signIn.dart';
+import 'package:onlylogin/Login.dart';
 
 class Admin extends StatefulWidget {
   Admin({Key? key}) : super(key: key);

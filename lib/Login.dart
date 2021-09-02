@@ -2,13 +2,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:onlylogin/admin.dart';
-// import 'package:onlylogin/home.dart';
-// import 'package:onlylogin/profile.dart';
-import 'package:onlylogin/Profile.dart';
+import 'package:onlylogin/Admin/All_User_Details.dart';
+import 'package:onlylogin/Users/Profile.dart';
+
 import 'dart:async';
 
-import 'package:onlylogin/signup.dart';
+import 'package:onlylogin/Users/signup.dart';
 
 // import 'package:onlylogin/signUp.dart';
 
@@ -120,10 +119,6 @@ class _LoginpageState extends State<Loginpage> {
             .signInWithEmailAndPassword(email: _email, password: _password);
 
         var uid = FirebaseAuth.instance.currentUser!.uid;
-        // final ref = fb.reference().child("data").child(uid).equalTo("admin");
-
-        // ignore: unnecessary_statements
-        // organisez(BuildContext context){
         if (dataref.value['data'][uid]['role'] == 'admin') {
           Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (_) => Admin()));

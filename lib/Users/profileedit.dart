@@ -4,9 +4,11 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:onlylogin/Profile.dart';
+// import 'package:onlylogin/Profile.dart';
 
 import 'dart:io' as Io;
+
+import 'package:onlylogin/Users/Profile.dart';
 
 // ignore: must_be_immutable
 class ProfilePage extends StatefulWidget {
@@ -456,10 +458,6 @@ class ProfilePageState extends State<ProfilePage>
 
   User user = FirebaseAuth.instance.currentUser!;
 
-  // await ref.child(user.uid).set({
-
-  //   "address": _add,
-  // });
   Future uploadtofirebase() async {
     var file = Io.File(imageFile!.path);
     FirebaseStorage storage = FirebaseStorage.instance;

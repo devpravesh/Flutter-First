@@ -1,9 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:onlylogin/admin.dart';
-import 'package:onlylogin/Profile.dart';
-import 'package:onlylogin/signIn.dart';
+import 'package:onlylogin/Admin/All_User_Details.dart';
+// import 'package:onlylogin/Profile.dart';
+import 'package:onlylogin/Users/Profile.dart';
+import 'package:onlylogin/Login.dart';
 
 // ignore: must_be_immutable
 class UserManagement extends StatelessWidget {
